@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLITCH</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* Styling for the 3D model behind the main section */
+        .main-container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            pointer-events: none; /* Add this line */
+        }
+
+        /* Then make sure clickable elements inside main can still receive events */
+        main button, 
+        main a {
+            pointer-events: auto;
+        }
+
+        .spline-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place the Spline behind the content */
+            border: none;
+            margin-top: 20px;
+        }
+
+        main {
+            z-index: 1; /* Ensure the text appears above the Spline background */
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation -->
+        <header>
+            <nav>
+                <a href="{% url 'projects' %}">projects</a>
+                <a href="{% url 'join' %}">join</a>
+                <a href="{% url 'about' %}">about us</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <div class="main-container">
+            <iframe 
+                class="spline-background" 
+                src="https://my.spline.design/particles-31e9dd774893aa5be46ecf64a863e767/" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                style="pointer-events: auto; width: 100%; height: 100%; border: none;">
+            </iframe>
+    
+            <main>
+                <h1>GLITCH</h1>
+                <p>UCLA's premier hackathon club</p>
+                <button onclick="scrollToWhoWeAre()">
+                    click to get started
+                </button>
+            </main>
+        </div>
+    </div>
+
+    <!-- Who Are We Section -->
+    <section class="who-we-are">
+        <h2>who are we?</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </section>
+
+    <!-- What Do We Do Section -->
+    <section class="what-we-do">
+        <h2>what do we do?</h2>
+        <div class="grid">
+            <div>thing 1</div>
+            <div>thing 2</div>
+            <div>thing 3</div>
+            <div>thing 4</div>
+            <div>thing 5</div>
+            <div>thing 6</div>
+            <div>thing 7</div>
+            <div>thing 8</div>
+        </div>
+    </section>
+
+    <section class="social-media">
+        <p>find us on:</p>
+        <div id="social-media-logos">
+            <button><img src="{% static 'logos/instagram.png' %}" alt="Instagram"></button>
+            <button><img src="{% static 'logos/linkedin.png' %}" alt="LinkedIn"></button>
+            <button><img src="{% static 'logos/github.png' %}" alt="GitHub"></button>
+        </div>
+    </section>
+    
+    <script>
+        function scrollToWhoWeAre() {
+          const element = document.querySelector('.who-we-are');
+          if (element) {
+            const position = element.getBoundingClientRect().top + window.scrollY - 200;
+            window.scrollTo({ top: position, behavior: 'smooth' });
+          }
+        }
+    </script>
+</body>
+</html>

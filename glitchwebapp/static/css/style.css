@@ -1,0 +1,250 @@
+/* index.html */
+@import url('https://fonts.googleapis.com/css?family=JetBrains Mono');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "JetBrains Mono";
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+/* Container (Hero Section) */
+.container {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header nav a:hover {
+    color: #888;
+}
+
+main h1 {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+main h2 {
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+main button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 14px;
+    font-family: "JetBrains Mono";
+    cursor: pointer;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+main button:hover {
+    background-color: #666;
+}
+
+/* Who We Are Section */
+.who-we-are {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
+
+.who-we-are h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
+
+.who-we-are p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* What We Do Section */
+.what-we-do {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.what-we-do h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
+
+.what-we-do .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.what-we-do .grid div {
+    font-size: 18px;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.what-we-do .grid div:hover {
+    background-color: #444;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 300px;
+}
+
+.social-media p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+#social-media-logos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#social-media-logos button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#social-media-logos img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+#social-media-logos img:hover {
+    transform: scale(1.1);
+}
+
+/*********************************************************/
+
+/* projects.html */
+
+.projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.projects-list li {
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: #222;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.projects-list li:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+/*********************************************************/
+
+/* join.html */
+
+/* Why Join Us Section */
+
+.why-join-us {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.why-join-us h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
+
+.why-join-us p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/*********************************************************/
+
+/* about.html */
+
+.our-mission {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.our-mission h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
+
+.our-mission p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}

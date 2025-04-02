@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about us</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <header>
+            <nav>
+                <a href="{% url 'index' %}">home</a>
+                <a href="{% url 'projects' %}">projects</a>
+                <a href="{% url 'join' %}">join</a>
+            </nav>
+        </header>
+
+        <main>
+             <!-- Our Mission Section -->
+            <section class="our-mission">
+                <h2>our mission</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <section class="social-media">
+        <p>Find us on:</p>
+        <div id="social-media-logos">
+            <button><img src="{% static 'logos/instagram.png' %}" alt="Instagram"></button>
+            <button><img src="{% static 'logos/linkedin.png' %}" alt="LinkedIn"></button>
+            <button><img src="{% static 'logos/github.png' %}" alt="GitHub"></button>
+        </div>
+    </section>
+</body>
+</html>
